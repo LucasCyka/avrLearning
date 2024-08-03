@@ -1,4 +1,4 @@
-#define F_CPU 8000000UL
+#define F_CPU 8000000UL //sets the cpu clock, 8mhz. UL = unsigned long
 
 #include <util/delay.h>
 

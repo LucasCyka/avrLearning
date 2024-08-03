@@ -6,11 +6,11 @@
                 "${workspaceFolder}/**",
                 "/usr/avr/include/"
             ],
-            "defines": [],
-            "compilerPath": "/usr/bin/clang",
+            "defines": ["__AVR_ATtiny2313__"],
+            "compilerPath": "/usr/bin/avr-gcc",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "linux-clang-x64"
+            "intelliSenseMode": "gcc-x86"
         }
     ],
     "version": 4

@@ -25,17 +25,17 @@ int main(){
 
     DDRB  |= (1 << 0);
     PORTB |= (1 << 0);
-
+    
     TCCR1B |= (1 << CS10); //timer 1 now is clocked to use 1MHZ without prescaling
 
-
+    
     while(1){//main loop
 
         //I want toggle portb pin0 output at 25hz
         //that means toggle it every 1/50 (0.02) seconds. (in one period it will turn on and off)
         //TCNT1 will be inclemented every clock period. The clock frequency is 1/1000000
         //That means I need to toggle the LED when TCNT1 is equal to 0.02/1us -1 (it counts from zero)
-        if (TCNT1 >= 19999){
+        if (TCNT1 >= 19999){ //half period
             PORTB ^= (1 << 0);
 
             TCNT1 = 0; //reset counter
